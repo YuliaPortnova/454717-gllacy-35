@@ -1,26 +1,26 @@
-/* @font-face {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 800;
-  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
-  font-display: swap;
-}
-
 @font-face {
-  font-family: "Rubik";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  src: url("../fonts/inter-400.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  src: url("../fonts/inter-700.woff2") format("woff2");
   font-display: swap;
-} */
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
 
 *,
 *::before,
@@ -28,7 +28,7 @@
   box-sizing: border-box;
 }
 
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -37,7 +37,7 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
+} */
 
 img {
   max-width: 100%;
@@ -49,6 +49,7 @@ img {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  text-decoration: none;
 }
 
 .button-neutral {
@@ -127,10 +128,32 @@ body {
 .navigation-link {
   font-size: 16px;
   line-height: 20px;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .navigation-subdirectory-title {
   font-weight: 700;
+}
+
+.navigation-subdirectory-link {
+  text-decoration: none;
+}
+
+.header-phone {
+  text-decoration: none;
+}
+
+.open-personal-account {
+  background-color: transparent;
+}
+
+.personal-account-link {
+  text-decoration: none;
+}
+
+.open-cart {
+  background-color: transparent;
 }
 
 .cart-subtitle {
@@ -185,8 +208,24 @@ body {
   color: #565c66;
 }
 
+.blog-link {
+  text-decoration: none;
+}
+
+.contacts-container {
+  font-style: normal;
+}
+
+.contacts-phone {
+  text-decoration: none;
+}
+
 .contacts-text-additional {
   color: #565c66;
+}
+
+.footer-navigation-link {
+  text-decoration: none;
 }
 
 .footer-navigation-link-accentuated {
