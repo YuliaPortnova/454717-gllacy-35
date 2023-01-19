@@ -266,6 +266,10 @@ body {
   text-align: center;
 }
 
+.product-button {
+  color: #2D3440;
+}
+
 .blog {
   background-color: #ffffff;
   background-image: url("../images/blog-background.png");
