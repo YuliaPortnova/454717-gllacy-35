@@ -160,8 +160,15 @@ body {
   text-decoration: none;
 }
 
-.open-personal-account {
-  background-color: transparent;
+.open-button {
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  border: none;
+  border-radius: 30px;
+}
+
+.open-search {
+  border-radius: 27px;
 }
 
 .personal-account-link {
@@ -206,9 +213,39 @@ body {
   line-height: 24px;
 }
 
+.socials-link {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.socials-telegram {
+  background-image: url("../images/socials/telegram-icon.svg");
+}
+
+.socials-vk {
+  background-image: url("../images/socials/vk-icon.svg");
+}
+
+.socials-youtube {
+  background-image: url("../images/socials/youtube-icon.svg");
+}
+
 .offer {
   background-color: #FF7799;
   border-radius: 16px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.offer-raspberry {
+  background-image: url("../images/offers-raspberry.png");
+}
+
+.offer-sugar {
+  background-image: url("../images/offers-sugar.png");
 }
 
 .offer-description {
@@ -229,6 +266,13 @@ body {
   text-align: center;
 }
 
+.blog {
+  background-color: #ffffff;
+  background-image: url("../images/blog-background.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
 .blog-title {
   font-size: 16px;
   line-height: 20px;
@@ -240,8 +284,34 @@ body {
   text-decoration: none;
 }
 
+.subscribe {
+  width: 570px;
+  padding: 6px;
+  background-image: repeating-linear-gradient(135deg, #ff2f64 0, #ff2f64 10px, #edf1f5 10px, #edf1f5 28px, #69a9ff 28px, #69a9ff 38px, #edf1f5 38px, #edf1f5 56px);
+}
+
+.subscribe-wrapper {
+  background-color: #ffffff;
+}
+
+.delivery {
+  background-color: #f6f6f6;
+  background-image: url("../images/delivery-background.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.delivery-form {
+  background-color: #fcfcfc;
+  box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
+}
+
 .contacts-container {
   font-style: normal;
+  background-color: #fcfcfc;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  border-radius: 8px;
 }
 
 .contacts-phone {
