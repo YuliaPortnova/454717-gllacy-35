@@ -346,13 +346,13 @@ body {
   color: #565c66;
 }
 
+.footer-navigation-title {
+  font-weight: 700;
+}
+
 .footer-navigation-link {
   color: #2D3440;
   text-decoration: none;
-}
-
-.footer-navigation-link-accentuated {
-  font-weight: 700;
 }
 
 .copyright-text {
