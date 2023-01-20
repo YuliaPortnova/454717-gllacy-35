@@ -139,10 +139,16 @@ body {
   line-height: 20px;
 }
 
-.pop-up {
+.header-dropdown {
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+}
+
+.page-header {
+  display: grid;
+  grid-template-columns: 670px 470px;
+  gap: 30px;
 }
 
 .navigation-link {
@@ -153,17 +159,17 @@ body {
   text-decoration: none;
 }
 
-.navigation-subdirectory {
+.navigation-catalog {
   background-color: #fcfcfc;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   border-radius: 4px;
 }
 
-.navigation-subdirectory-title {
+.navigation-catalog-accentuated {
   font-weight: 700;
 }
 
-.navigation-subdirectory-link {
+.navigation-catalog-link {
   color: #2D3440;
   text-decoration: none;
 }
