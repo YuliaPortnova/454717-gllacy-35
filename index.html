@@ -112,7 +112,8 @@
                 2 товара
               </button>
               <div class="cart">
-                <section class="cart-full header-dropdown">
+                <!-- Для открытия пустой корзины переместите класс cart-current с section.cart-full на div.cart-empty -->
+                <section class="cart-full cart-current header-dropdown">
                   <h2 class="cart-title subtitle">Корзина</h2>
                   <ul class="cart-list">
                     <li class="cart-item">
@@ -160,7 +161,7 @@
           <div class="slider-wrapper">
             <h2 class="visually-hidden">Популярное мороженое</h2>
             <ul class="slider-list">
-              <li class="slider-item">
+              <li class="slider-item slider-item-current">
                 <div class="slider-left-column">
                   <h3 class="slider-item-title">Нежный пломбир с клубничным джемом</h3>
                   <p class="slider-item-description">Натуральное мороженое из свежих сливок и молока с вкуснейшим
@@ -171,18 +172,8 @@
                   <img class="slider-image" src="images/slider/slider-ice-cream-1.png" width="306" height="507"
                     alt="Бело-розовый пломбир в хрустящем вафельном стаканчике.">
                 </div>
-                <div class="slider-right-column">
-                  <ul class="slider-next-list">
-                    <li class="slider-next-item">
-                      <img class="slider-next-image" src="#" alt="Сливочное мороженое со вкусом банана.">
-                    </li>
-                    <li class="slider-next-item">
-                      <img class="slider-next-image" src="#" alt="Карамельный пломбир с маршмеллоу.">
-                    </li>
-                  </ul>
-                </div>
               </li>
-              <li class="slider-item">
+              <li class="slider-item slider-item-next">
                 <div class="slider-left-column">
                   <h3 class="slider-item-title">Сливочное мороженое со вкусом банана</h3>
                   <p class="slider-item-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
@@ -193,18 +184,8 @@
                   <img class="slider-image" src="images/slider/slider-ice-cream-2.png" width="306" height="507"
                     alt="Кремово-золотистый пломбир в хрустящем вафельном стаканчике.">
                 </div>
-                <div class="slider-right-column">
-                  <ul class="slider-next-list">
-                    <li class="slider-next-item">
-                      <img class="slider-next-image" src="#" alt="Карамельный пломбир с маршмеллоу.">
-                    </li>
-                    <li class="slider-next-item">
-                      <img class="slider-next-image" src="#" alt="Нежный пломбир с клубничным джемом.">
-                    </li>
-                  </ul>
-                </div>
               </li>
-              <li class="slider-item">
+              <li class="slider-item slider-item-next">
                 <div class="slider-left-column">
                   <h3 class="slider-item-title">Карамельный пломбир с маршмеллоу</h3>
                   <p class="slider-item-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира
@@ -214,16 +195,6 @@
                 <div class="slider-center">
                   <img class="slider-image" src="images/slider/slider-ice-cream-3.png" width="306" height="507"
                     alt="Нежно-розовый пломбир в хрустящем вафельном стаканчике.">
-                </div>
-                <div class="slider-right-column">
-                  <ul class="slider-next-list">
-                    <li class="slider-next-item">
-                      <img class="slider-next-image" src="#" alt="Нежный пломбир с клубничным джемом.">
-                    </li>
-                    <li class="slider-next-item">
-                      <img class="slider-next-image" src="#" alt="Сливочное мороженое со вкусом банана.">
-                    </li>
-                  </ul>
                 </div>
               </li>
             </ul>
@@ -439,7 +410,8 @@
               <div class="delivery-form-wrapper">
                 <label class="delivery-label">
                   <span class="delivery-label-text label">Дата</span>
-                  <input class="delivery-input-date input-text" type="text" name="date" placeholder="01.04.2020" required>
+                  <input class="delivery-input-date input-text" type="text" name="date" placeholder="01.04.2020"
+                    required>
                 </label>
                 <label class="delivery-phone">
                   <span class="delivery-label-text label">Телефон</span>
@@ -508,7 +480,8 @@
               <img class="copyright-logo" src="images/logo-html-academy.svg" width="93" height="27"
                 alt="Логотип html academy">
             </a>
-            <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru">.html academy</a>
+            <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru">.html
+                academy</a>
               © 2021</p>
           </div>
         </div>
