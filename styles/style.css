@@ -49,9 +49,11 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 1366px;
+  min-height: 100%;
   margin: 0;
-  height: 100%;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -61,9 +63,6 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
   width: 1170px;
   margin: 0 auto;
 }
@@ -145,7 +144,7 @@ body {
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
 }
 
-.page-header {
+.page-header-wrapper {
   display: grid;
   grid-template-columns: 670px 470px;
   gap: 30px;
@@ -317,7 +316,7 @@ body {
   background-color: #ffffff;
 }
 
-.delivery {
+.delivery-wrapper {
   background-color: #f6f6f6;
   background-image: url("../images/delivery-background.jpg");
   background-repeat: no-repeat;
