@@ -63,7 +63,7 @@ body {
 }
 
 .container {
-  width: 1170px;
+  width: 1240px;
   margin: 0 auto;
   padding: 0 35px;
 }
@@ -77,24 +77,27 @@ body {
 }
 
 .button {
+  display: inline-flex;
+  padding: 12px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   text-align: center;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  border-radius: 26px;
 }
 
 .button-neutral {
   color: #2D3440;
-  background-color: #ffffff;
+  background-color: #fcfcfc;
+  outline: 4px solid rgba(252, 252, 252, 0.4);
 }
 
 .button-bright {
   color: #fcfcfc;
   background-color: #FF2F64;
-  border: 4px solid rgba(255, 47, 100, 0.3);
-  border-radius: 26px;
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
+  border-color: rgba(255, 47, 100, 0.3);
 }
 
 .title {
@@ -317,8 +320,13 @@ body {
   line-height: 22px;
 }
 
+.slider {
+  margin-bottom: 67px;
+}
+
 .slider-wrapper {
   position: relative;
+  min-height: 549px;
 }
 
 .slider-list {
@@ -331,7 +339,7 @@ body {
 }
 
 .slider-left-column {
-  padding: 136px 0 136px 70px;
+  padding: 117px 0 117px 70px;
 }
 
 .slider-item-next .slider-left-column{
@@ -345,21 +353,42 @@ body {
 }
 
 .slider-item-title {
+  margin: 0;
+  margin-bottom: 24px;
   font-weight: 900;
   font-size: 36px;
   line-height: 46px;
 }
 
 .slider-item-description {
+  margin: 0;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 24px;
 }
 
+.slider-item-button {
+  margin: 0 30px 30px 0;
+}
+
+.slider-item-description:last-of-type {
+  margin-bottom: 48px;
+}
+
+.slider-image {
+  display: block;
+  margin: 0 auto;
+}
+
+.slider-item-next .slider-image {
+  width: 66px;
+}
+
 .slider-controls {
   position: absolute;
-  top: 258px;
+  top: 240px;
   left: 542px;
-  width: 325px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
 }
@@ -373,20 +402,47 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
   list-style-type: none;
 }
 
+.slider-pagination-item {
+  margin-right: 8px;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(252, 252, 252, 0.3);
+  outline: 1px solid rgba(252, 252, 252, 0.3);
+  border: none;
+  border-radius: 100px;
+}
+
 .socials-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.socials-list-slider {
   position: absolute;
   right: 0;
   bottom: 0;
-  list-style-type: none;
+}
+
+.socials-item:not(:last-child) {
+  margin-right: 16px;
 }
 
 .socials-link {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
+  outline: 2px solid rgba(252, 252, 252, 0.3);
+  border-radius: 24px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -403,7 +459,13 @@ body {
   background-image: url("../images/socials/youtube-icon.svg");
 }
 
+.offers {
+  margin-bottom: 81px;
+}
+
 .offers-title {
+  width: 450px;
+  margin: 0 auto 55px auto;
   text-align: center;
 }
 
@@ -413,9 +475,11 @@ body {
   gap: 30px;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .offer {
+  padding: 36px 206px 36px 36px;
   background-color: #FF7799;
   border-radius: 16px;
   background-position: right;
@@ -430,25 +494,72 @@ body {
   background-image: url("../images/offers-sugar.png");
 }
 
+.offer-title {
+  margin: 0 0 28px 0;
+}
+
 .offer-description {
+  margin: 0 0 28px 0;
   font-size: 16px;
   line-height: 22px;
 }
 
+.offer-button {
+  margin-right: 30px;
+}
+
+.offer-button:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.favorites-list {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.favorites-title {
+  width: 530px;
+  margin: 0 auto 56px auto;
+  text-align: center;
+}
+
 .product-item {
+  position: relative;
+  margin-top: 51px;
+  padding: 133px 40px 28px 40px;
   background-color: #fcfcfc;
   border-radius: 8px;
 }
 
+.product-photo {
+  position: absolute;
+  top: -51px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
 .product-title {
+  margin: 0 0 8px 0;
   text-align: center;
 }
 
 .product-description {
+  margin: 0 0 16px 0;
   text-align: center;
 }
 
+.product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .product-button {
+  margin-left: auto;
   color: #2D3440;
 }
 
