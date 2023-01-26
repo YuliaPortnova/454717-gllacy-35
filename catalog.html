@@ -54,8 +54,9 @@
           <div class="header-wrapper">
             <a class="header-phone" href="tel:88005558628">+7 800 555-86-28</a>
             <div class="search-wrapper">
-              <button class="open-search open-button">
-                <svg role="img" aria-label="Поиск по сайту" width="14" height="14" fill="currentColor" viewBox="0 0 14 14">
+              <button class="open-search open-button" type="button">
+                <svg role="img" aria-label="Поиск по сайту" width="14" height="14" fill="currentColor"
+                  viewBox="0 0 14 14">
                   <path fill-rule="evenodd"
                     d="M1.66 6.19a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.44a.67.67 0 1 1-.94.95l-2.45-2.45Z"
                     clip-rule="evenodd" />
@@ -64,12 +65,13 @@
               <form class="search-form header-dropdown" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="search-label">
                   <span class="visually-hidden">Поиск</span>
-                  <input class="search-input input-text" type="search" name="search" placeholder="Поиск по сайту" required>
+                  <input class="search-input input-text" type="search" name="search" placeholder="Поиск по сайту"
+                    required>
                 </label>
               </form>
             </div>
             <div class="personal-account-wrapper">
-              <button class="open-personal-account open-button">
+              <button class="open-personal-account open-button" type="button">
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="15"
                   fill="currentColor" viewBox="0 0 14 15">
                   <path fill-rule="evenodd"
@@ -91,10 +93,12 @@
                     <input class="personal-account-password-input input-text" type="password" name="email"
                       placeholder="......" required>
                   </label>
-                  <button class="personal-account-button button button-bright" type="submit">Войти</button>
-                  <div class="personal-account-links">
-                    <a class="personal-account-link" href="#">Забыли пароль?</a>
-                    <a class="personal-account-link" href="#">Регистрация</a>
+                  <div class="personal-account-wrapper">
+                    <button class="personal-account-button button button-bright" type="submit">Войти</button>
+                    <div class="personal-account-links">
+                      <a class="personal-account-link" href="#">Забыли пароль?</a>
+                      <a class="personal-account-link" href="#">Регистрация</a>
+                    </div>
                   </div>
                 </form>
               </section>
@@ -114,10 +118,12 @@
                   <h2 class="cart-title subtitle">Корзина</h2>
                   <ul class="cart-list">
                     <li class="cart-item">
-                      <img class="cart-image" src="images/cart-products/cart-product-1.jpg" width="46" height="46"
-                        alt="Ярко-розовое мороженое «Малинка»">
+                      <a class="cart-item-link-image" href="#">
+                        <img class="cart-image" src="images/cart-products/cart-product-1.jpg" width="46" height="46"
+                          alt="Ярко-розовое мороженое «Малинка»">
+                      </a>
                       <div class="cart-subtitle-wrapper">
-                        <h3 class="cart-subtitle">Малинка</h3>
+                        <a class="cart-item-link cart-subtitle" href="#">Малинка</a>
                         <p class="cart-description">1 кг х 310 ₽</p>
                       </div>
                       <p class="cart-price">310 ₽</p>
@@ -126,10 +132,12 @@
                       </button>
                     </li>
                     <li class="cart-item">
-                      <img class="cart-image" src="images/cart-products/cart-product-2.jpg" width="46" height="46"
-                        alt="Нежно-голубое мороженое «Бабл-гам>»">
+                      <a class="cart-item-link-image" href="#">
+                        <img class="cart-image" src="images/cart-products/cart-product-2.jpg" width="46" height="46"
+                          alt="Нежно-голубое мороженое «Бабл-гам>»">
+                      </a>
                       <div class="cart-subtitle-wrapper">
-                        <h3 class="cart-subtitle">Бабл-гам</h3>
+                        <a class="cart-item-link cart-subtitle" href="#">Бабл-гам</a>
                         <p class="cart-description">1,5 кг х 320 ₽</p>
                       </div>
                       <p class="cart-price">480 ₽</p>
@@ -175,14 +183,14 @@
           <div class="catalog-products-wrapper">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="select-label">
-                <span class="select-label-text">Сортировка:</span>
+              <fieldset class="filter-group">
+                <legend class="filter-title">Сортировка:</legend>
                 <select class="filter-select" name="filter">
                   <option value="popular">по популярности</option>
                   <option value="price">по цене</option>
                   <option value="review">по отзывам</option>
                 </select>
-              </label>
+              </fieldset>>
               <fieldset class="filter-group">
                 <legend class="filter-title">Цена: 100 ₽ – 500 ₽</legend>
                 <div class="filter-range">
@@ -236,7 +244,8 @@
                 <ul class="filter-list">
                   <li class="filter-item filter-item-checkbox">
                     <label class="filter-control">
-                      <input class="checkbox-input visually-hidden" type="checkbox" name="filler" value="chocolate" checked>
+                      <input class="checkbox-input visually-hidden" type="checkbox" name="filler" value="chocolate"
+                        checked>
                       <span class="control-mark control-mark-checkbox"></span>
                       <span class="control-label">шоколадные</span>
                     </label>
@@ -500,7 +509,7 @@
       </section>
 
     </main>
-    
+
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer-wrapper">
@@ -533,8 +542,11 @@
               <img class="copyright-logo" src="images/logo-html-academy.svg" width="93" height="27"
                 alt="Логотип html academy">
             </a>
-            <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru">.html academy</a>
-              © 2021</p>
+            <p class="copyright-text">
+              Сделано в
+              <a class="copyright-link" href="https://htmlacademy.ru">.html academy</a>
+              © 2021
+            </p>
           </div>
         </div>
       </div>

@@ -55,7 +55,7 @@
             <div class="header-wrapper-item phone-wrapper">
               <a class="header-phone" href="tel:88005558628">+7 800 555-86-28</a>
             </div>
-            <div class="header-wrapper-item search-wrapper">
+            <div class="header-wrapper-item search-wrapper" type="button">
               <button class="open-search open-button">
                 <svg role="img" aria-label="Поиск по сайту" width="14" height="14" fill="currentColor"
                   viewBox="0 0 14 14">
@@ -73,7 +73,7 @@
               </form>
             </div>
             <div class="header-wrapper-item personal-account-wrapper">
-              <button class="open-personal-account open-button">
+              <button class="open-personal-account open-button" type="button">
                 <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="14" height="15" fill="currentColor" viewBox="0 0 14 15">
                   <path fill-rule="evenodd"
@@ -95,10 +95,12 @@
                     <input class="personal-account-password-input input-text" type="password" name="email"
                       placeholder="......" required>
                   </label>
-                  <button class="personal-account-button button button-bright" type="submit">Войти</button>
-                  <div class="personal-account-links">
-                    <a class="personal-account-link" href="#">Забыли пароль?</a>
-                    <a class="personal-account-link" href="#">Регистрация</a>
+                  <div class="personal-account-wrapper">
+                    <button class="personal-account-button button button-bright" type="submit">Войти</button>
+                    <div class="personal-account-links">
+                      <a class="personal-account-link" href="#">Забыли пароль?</a>
+                      <a class="personal-account-link" href="#">Регистрация</a>
+                    </div>
                   </div>
                 </form>
               </section>
@@ -118,10 +120,12 @@
                   <h2 class="cart-title subtitle">Корзина</h2>
                   <ul class="cart-list">
                     <li class="cart-item">
-                      <img class="cart-image" src="images/cart-products/cart-product-1.jpg" width="46" height="46"
-                        alt="Ярко-розовое мороженое «Малинка»">
+                      <a class="cart-item-link-image" href="#">
+                        <img class="cart-image" src="images/cart-products/cart-product-1.jpg" width="46" height="46"
+                          alt="Ярко-розовое мороженое «Малинка»">
+                      </a>
                       <div class="cart-subtitle-wrapper">
-                        <h3 class="cart-subtitle">Малинка</h3>
+                        <a class="cart-item-link cart-subtitle" href="#">Малинка</a>
                         <p class="cart-description">1 кг х 310 ₽</p>
                       </div>
                       <p class="cart-price">310 ₽</p>
@@ -130,10 +134,12 @@
                       </button>
                     </li>
                     <li class="cart-item">
-                      <img class="cart-image" src="images/cart-products/cart-product-2.jpg" width="46" height="46"
-                        alt="Нежно-голубое мороженое «Бабл-гам>»">
+                      <a class="cart-item-link-image" href="#">
+                        <img class="cart-image" src="images/cart-products/cart-product-2.jpg" width="46" height="46"
+                          alt="Нежно-голубое мороженое «Бабл-гам>»">
+                      </a>
                       <div class="cart-subtitle-wrapper">
-                        <h3 class="cart-subtitle">Бабл-гам</h3>
+                        <a class="cart-item-link cart-subtitle" href="#">Бабл-гам</a>
                         <p class="cart-description">1,5 кг х 320 ₽</p>
                       </div>
                       <p class="cart-price">480 ₽</p>
@@ -162,38 +168,38 @@
           <div class="slider-wrapper">
             <h2 class="visually-hidden">Популярное мороженое</h2>
             <ul class="slider-list">
-              <li class="slider-item slider-item-current">
-                <div class="slider-left-column">
+              <li class="slider-item">
+                <div class="slider-content">
                   <h3 class="slider-item-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
-                  <p class="slider-item-description">Натуральное мороженое из&nbsp;свежих сливок и&nbsp;молока с&nbsp;вкуснейшим клубничным джемом&nbsp;&#151; это&nbsp;идеальный десерт для&nbsp;всей семьи. </p>
+                  <p class="slider-item-description">Натуральное мороженое из&nbsp;свежих сливок и&nbsp;молока с&nbsp;вкуснейшим клубничным джемом&nbsp;– это&nbsp;идеальный десерт для&nbsp;всей семьи. </p>
                   <a class="slider-item-button button button-neutral" href="#">Заказать</a>
                 </div>
-                <div class="slider-center">
+                <div class="slider-image-wrapper">
                   <img class="slider-image" src="images/slider/slider-ice-cream-1.png" width="306" height="507"
                     alt="Бело-розовый пломбир в хрустящем вафельном стаканчике.">
                 </div>
               </li>
-              <li class="slider-item slider-item-next">
-                <div class="slider-left-column">
+              <li class="slider-item slider-item-active">
+                <div class="slider-content">
                   <h3 class="slider-item-title">Сливочное мороженое со вкусом банана</h3>
                   <p class="slider-item-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
                     наслаждение даже в самый жаркий летний день.</p>
                   <a class="slider-item-button button button-neutral" href="#">Заказать</a>
                 </div>
-                <div class="slider-center">
-                  <img class="slider-image" src="images/slider/slider-ice-cream-2.png" width="306" height="507"
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="images/slider/slider-ice-cream-3.png" width="306" height="507"
                     alt="Кремово-золотистый пломбир в хрустящем вафельном стаканчике.">
                 </div>
               </li>
-              <li class="slider-item slider-item-next">
-                <div class="slider-left-column">
+              <li class="slider-item">
+                <div class="slider-content">
                   <h3 class="slider-item-title">Карамельный пломбир с маршмеллоу</h3>
                   <p class="slider-item-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира
                     завоюет сердца сладкоежек всех возрастов.</p>
                   <a class="slider-item-button button button-neutral" href="#">Заказать</a>
                 </div>
-                <div class="slider-center">
-                  <img class="slider-image" src="images/slider/slider-ice-cream-3.png" width="306" height="507"
+                <div class="slider-image-wrapper">
+                  <img class="slider-image" src="images/slider/slider-ice-cream-2.png" width="306" height="507"
                     alt="Нежно-розовый пломбир в хрустящем вафельном стаканчике.">
                 </div>
               </li>
@@ -428,8 +434,8 @@
             <div class="contacts-content">
               <h2 class="visually-hidden">Как с нами связаться</h2>
               <address class="contacts-container">
-                <p class="contacts-text text">Адрес главного офиса и офлайн-магазина:</p>
-                <p class="contacts-address bold">наб. реки Карповки, 5 лит П, Санкт-Петербург</p>
+                <p class="contacts-text text">Адрес главного офиса <br>и&nbsp;офлайн-магазина:</p>
+                <p class="contacts-address bold">наб. реки Карповки, 5&nbsp;лит&nbsp;П, Санкт-Петербург</p>
                 <p class="contacts-text text">Для заказов по телефону:</p>
                 <a class="contacts-phone bold" href="tel:+78128121212">+7 (812) 812-12-12</a>
                 <p class="contacts-text-additional">(с 10 до 20 ежедневно)</p>
@@ -445,7 +451,7 @@
     <footer class="page-footer">
       <div class="container">
         <div class="page-footer-wrapper">
-          <ul class="socials-list">
+          <ul class="footer-socials-list socials-list">
             <li class="socials-item">
               <a class="socials-link socials-telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграм.</span>
@@ -474,9 +480,11 @@
               <img class="copyright-logo" src="images/logo-html-academy.svg" width="93" height="27"
                 alt="Логотип html academy">
             </a>
-            <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru">.html
-                academy</a>
-              © 2021</p>
+            <p class="copyright-text">
+              Сделано в
+              <a class="copyright-link" href="https://htmlacademy.ru">.html academy</a>
+              © 2021
+            </p>
           </div>
         </div>
       </div>
