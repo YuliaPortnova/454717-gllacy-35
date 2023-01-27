@@ -147,9 +147,14 @@ body {
 }
 
 .header-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
   background-color: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
+  z-index: 1;
 }
 
 .page-header-wrapper {
@@ -189,11 +194,14 @@ body {
   background-color: transparent;
 }
 
+.navigation-catalog {
+  position: relative;
+}
+
 .navigation-catalog-list {
-  background-color: #fcfcfc;
+  left: 0;
+  width: 135px;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
-  border-radius: 4px;
-  display: none;
 }
 
 .navigation-catalog:focus-within .navigation-catalog-list {
@@ -218,6 +226,7 @@ body {
 
 .header-wrapper-item {
   margin: 0 16px 15px 0;
+  position: relative;
 }
 
 .phone-wrapper {
@@ -240,7 +249,7 @@ body {
 }
 
 .search-form {
-  display: none;
+  width: 356px;
 }
 
 .search-wrapper:focus-within .search-form {
@@ -274,7 +283,7 @@ body {
 }
 
 .personal-account {
-  display: none;
+  width: 420px;
 }
 
 .personal-account-wrapper:focus-within .personal-account {
@@ -287,11 +296,11 @@ body {
 }
 
 .cart-full {
-  display: none;
+  width: 441px;
 }
 
 .cart-empty {
-  display: none;
+  width: 288px;
 }
 
 .cart-wrapper:focus-within .cart-current {
@@ -489,7 +498,13 @@ body {
   list-style-type: none;
 }
 
+.offers-item {
+}
+
 .offer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 36px 206px 36px 36px;
   background-color: #FF7799;
   border-radius: 16px;
@@ -516,7 +531,7 @@ body {
 }
 
 .offer-button {
-  margin-right: 30px;
+  margin: auto 30px 0 0;
 }
 
 .offer-button:not(:last-child) {
@@ -562,6 +577,7 @@ body {
 }
 
 .product-photo {
+  margin-bottom: 16px;
   align-self: center;
   border-radius: 50%;
 }
@@ -667,6 +683,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  align-items: flex-start;
 }
 
 .blog {
@@ -675,6 +692,7 @@ body {
   background-image: url("../images/blog-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   border-radius: 16px;
 }
 
@@ -693,7 +711,6 @@ body {
 }
 
 .subscribe {
-  align-self: start;
   width: 570px;
   padding: 6px;
   background-image: repeating-linear-gradient(131deg, #ff2f64 0, #ff2f64 10px, #edf1f5 10px, #edf1f5 24px, #69a9ff 24px, #69a9ff 32px, #edf1f5 33px, #edf1f5 47px);
@@ -830,6 +847,10 @@ body {
   text-decoration: none;
 }
 
+.contacts-phone + .contacts-phone {
+  margin-top: 5px;
+}
+
 .contacts-text-additional {
   margin: 0;
   color: #565c66;
@@ -843,6 +864,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
   object-fit: cover;
   z-index: -1;
 }
