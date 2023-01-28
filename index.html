@@ -57,8 +57,8 @@
             <div class="header-wrapper-item phone-wrapper">
               <a class="header-phone" href="tel:88005558628">+7 800 555-86-28</a>
             </div>
-            <div class="header-wrapper-item search-wrapper" type="button">
-              <button class="open-search open-button" aria-label="Поиск по сайту">
+            <div class="header-wrapper-item search-wrapper">
+              <button class="open-search open-button" aria-label="Поиск по сайту" type="button">
                 <svg aria-hidden="true" focusable="false" width="14" height="14" fill="currentColor"
                   viewBox="0 0 14 14">
                   <path fill-rule="evenodd"
@@ -171,7 +171,7 @@
           <div class="slider-wrapper">
             <h2 class="visually-hidden">Популярное мороженое</h2>
             <ul class="slider-list">
-              <li class="slider-item">
+              <li class="slider-item slider-item-active">
                 <div class="slider-content">
                   <h3 class="slider-item-title">Нежный пломбир с&nbsp;клубничным джемом</h3>
                   <p class="slider-item-description">Натуральное мороженое из&nbsp;свежих сливок и&nbsp;молока
@@ -183,7 +183,7 @@
                     alt="Бело-розовый пломбир в хрустящем вафельном стаканчике.">
                 </div>
               </li>
-              <li class="slider-item slider-item-active">
+              <li class="slider-item">
                 <div class="slider-content">
                   <h3 class="slider-item-title">Сливочное мороженое со вкусом банана</h3>
                   <p class="slider-item-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
@@ -216,40 +216,42 @@
                 <span class="visually-hidden">Следующий слайд.</span>
               </button>
             </div>
-            <ul class="slider-pagination">
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                  <span class="visually-hidden">Перейти к слайду: нежный пломбир с клубничным джемом.</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">Перейти к слайду: сливочное мороженое со вкусом банана.</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">Перейти к слайду: карамельный пломбир с маршмеллоу.</span>
-                </button>
-              </li>
-            </ul>
-            <ul class="socials-list socials-list-slider">
-              <li class="socials-item">
-                <a class="socials-link socials-telegram" href="https://t.me/htmlacademy">
-                  <span class="visually-hidden">Мы в Телеграм.</span>
-                </a>
-              </li>
-              <li class="socials-item">
-                <a class="socials-link socials-vk" href="https://vk.com/htmlacademy">
-                  <span class="visually-hidden">Мы во ВКонтакте.</span>
-                </a>
-              </li>
-              <li class="socials-item">
-                <a class="socials-link socials-youtube" href="https://www.youtube.com/user/htmlacademyru">
-                  <span class="visually-hidden">Мы на Ютуб.</span>
-                </a>
-              </li>
-            </ul>
+            <div class="slider-footer">
+              <ul class="slider-pagination">
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">Перейти к слайду: нежный пломбир с клубничным джемом.</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">Перейти к слайду: сливочное мороженое со вкусом банана.</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">Перейти к слайду: карамельный пломбир с маршмеллоу.</span>
+                  </button>
+                </li>
+              </ul>
+              <ul class="socials-list slider-socials-list">
+                <li class="socials-item">
+                  <a class="socials-link socials-telegram" href="https://t.me/htmlacademy">
+                    <span class="visually-hidden">Мы в Телеграм.</span>
+                  </a>
+                </li>
+                <li class="socials-item">
+                  <a class="socials-link socials-vk" href="https://vk.com/htmlacademy">
+                    <span class="visually-hidden">Мы во ВКонтакте.</span>
+                  </a>
+                </li>
+                <li class="socials-item">
+                  <a class="socials-link socials-youtube" href="https://www.youtube.com/user/htmlacademyru">
+                    <span class="visually-hidden">Мы на Ютуб.</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -269,7 +271,7 @@
               <li class="offers-item">
                 <article class="offer offer-sugar">
                   <h3 class="offer-title subtitle">Маршмеллоу даром!</h3>
-                  <p class="offer-description">При покупке 2 кг пломбира добавим в&nbsp;ваш заказ упаковку нежных
+                  <p class="offer-description">При покупке 2 кг пломбира добавим в&nbsp;ваш заказ упаковку нежных <br>
                     зефирок совершенно бесплатно.</p>
                   <a class="offer-button button button-neutral" href="#">Хочу подарок</a>
                 </article>
