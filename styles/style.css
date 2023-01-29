@@ -357,6 +357,10 @@ body {
 
 .slider-item-active {
   width: 888px;
+  order: -2;
+}
+
+.slider-item-active + .slider-item {
   order: -1;
 }
 
