@@ -80,21 +80,22 @@ body {
   line-height: 20px;
   text-align: center;
   text-decoration: none;
-  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
+  border: none;
 }
 
 .button-neutral {
   color: #2d3440;
   background-color: #fcfcfc;
-  outline: 4px solid rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4),
+              0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button-bright {
   color: #fcfcfc;
   background-color: #ff2f64;
-  border-color: rgba(255, 47, 100, 0.3);
-  outline: 4px solid rgba(255, 47, 100, 0.3);
+  box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3),
+              0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .input {
@@ -339,7 +340,6 @@ body {
 
 .slider-wrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .slider-list {
@@ -348,6 +348,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  overflow: hidden;
 }
 
 .slider-item {
@@ -470,7 +471,7 @@ body {
   width: 12px;
   height: 12px;
   background-color: rgba(252, 252, 252, 0.3);
-  outline: 1px solid rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 1px rgba(252, 252, 252, 0.3);
   border: none;
   border-radius: 100px;
 }
@@ -495,7 +496,7 @@ body {
   display: block;
   width: 24px;
   height: 24px;
-  outline: 2px solid rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
   border-radius: 24px;
   background-repeat: no-repeat;
   background-position: center;
@@ -1064,7 +1065,33 @@ body {
   border-radius: 20px;
 }
 
+.catalog-products-list {
+  margin-bottom: 57px;
+}
+
+.catalog-products-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.button-more {
+
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .pagination-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
   font-size: 16px;
   line-height: 20px;
   color: #2d3440;
