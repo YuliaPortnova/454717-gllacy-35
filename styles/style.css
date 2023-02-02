@@ -460,14 +460,19 @@ body {
 }
 
 .slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 38px;
   height: 38px;
+  color: #fcfcfc;
   background-color: rgba(252, 252, 252, 0.3);
-  background-image: url("../images/arrow-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   border: 2px solid #fcfcfc;
   border-radius: 26px;
+}
+
+.slider-button-prev {
+  transform: rotate(180deg);
 }
 
 .slider-footer {
