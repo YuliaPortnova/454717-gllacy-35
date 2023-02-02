@@ -23,7 +23,7 @@
             <ul class="navigation-list">
               <li class="navigation-item">
                 <div class="navigation-catalog" tabindex="0">
-                <!-- tabindex="0" добавлен для корректной работы в Safari -->
+                  <!-- tabindex="0" добавлен для корректной работы в Safari -->
                   <button class="navigation-link navigation-button" type="button" tabindex="-1">Каталог</button>
                   <!-- tabindex="-1" добавлен для корректной работы в Safari -->
                   <ul class="navigation-catalog-list header-dropdown">
@@ -108,14 +108,13 @@
               </section>
             </div>
             <div class="header-wrapper-item cart-wrapper">
-              <button class="open-cart open-button" type="button">
-                <svg class="open-icon" role="img" aria-label="Корзина." xmlns="http://www.w3.org/2000/svg" width="15"
-                  height="14" fill="currentColor" viewBox="0 0 15 14">
+              <button class="open-cart open-button" type="button" aria-label="Корзина.">
+                <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"
                     clip-rule="evenodd" />
                 </svg>
-                2 товара
+                <span class="open-cart-text">2 товара</span>
               </button>
               <div class="cart">
                 <!-- Для показа пустой корзины переместите класс cart-current с section.cart-full на div.cart-empty -->
