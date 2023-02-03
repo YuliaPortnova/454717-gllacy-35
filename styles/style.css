@@ -92,6 +92,39 @@ body {
               0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
+.button-neutral:hover {
+  background-color: rgba(252, 252, 252, 0.4);
+  box-shadow: 0 0 0 4px #fcfcfc,
+              0 4px 15px rgba(133, 133, 133, 0.15);
+}
+
+.button-neutral:active {
+  background-color: #fcfcfc;
+  box-shadow: 0 0 0 2px #2D3440,
+              0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button-neutral:focus-visible {
+  outline: none;
+  background-color: rgba(252, 252, 252, 0.5);
+  box-shadow: 0 0 0 2px #2D3440,
+              0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+@supports not selector(:focus-visible) {
+  .button-neutral:focus-visible {
+    outline: none;
+    background-color: rgba(252, 252, 252, 0.5);
+    box-shadow: 0 0 0 2px #2D3440,
+                0 4px 12px rgba(45, 52, 64, 0.1);
+  }
+}
+
+.button-neutral:disabled {
+  background-color: #e7e7e7;
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.4);
+}
+
 .button-bright {
   color: #fcfcfc;
   background-color: #ff2f64;
@@ -172,6 +205,33 @@ body {
   gap: 16px;
 }
 
+.header-logo {
+  align-self: flex-start;
+  border-radius: 30px;
+}
+
+.header-logo:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.header-logo:active {
+  background-color: #fcfcfc;
+}
+
+.header-logo:focus-visible {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #2D3440;
+  outline-offset: 12px;
+}
+
+@supports not selector(:focus-visible) {
+  .header-logo:focus {
+    background-color: rgba(252, 252, 252, 0.5);
+    outline: 2px solid #2D3440;
+    outline-offset: 12px;
+  }
+}
+
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
@@ -183,33 +243,83 @@ body {
 
 .navigation-link {
   display: inline-flex;
-  padding: 8px 16px;
+  padding: 6px 14px;
   font-size: 16px;
   line-height: 20px;
   color: #2d3440;
   text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid transparent;
 }
 
 .navigation-button {
+  display: inline-flex;
+  padding: 6px 14px;
   font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2d3440;
   padding-right: 16px;
-  border: none;
   background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  cursor: pointer;
 }
 
-.navigation-button::after {
-  content: "";
+.navigation-button-icon {
   width: 16px;
   height: 16px;
   margin: 3px 0 0 6px;
-  background-image: url("../images/arrow-icon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: rotate(90deg);
+}
+
+.navigation-link:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.navigation-link:active {
+  background-color: #fcfcfc;
+}
+
+.navigation-link:focus-visible {
+  outline: none;
+  background-color: rgba(252, 252, 252, 0.5);
+  border-color: #2D3440;
+}
+
+@supports not selector(:focus-visible) {
+  .navigation-link:focus {
+    outline: none;
+    background-color: rgba(252, 252, 252, 0.5);
+    border-color: #2D3440;
+  }
+}
+
+.navigation-catalog:focus {
+  outline: none;
+}
+
+.navigation-catalog:focus-within .navigation-button{
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.navigation-catalog:focus .navigation-button {
+  outline: none;
+  color: #ffffff;
+  background-color: #FF4A78;;
+}
+
+.navigation-catalog:focus .navigation-button-icon {
+  transform: rotate(180deg);
+}
+
+.navigation-catalog:hover .navigation-button {
+  background: rgba(252, 252, 252, 0.5);
 }
 
 .navigation-catalog {
   position: relative;
+  border-radius: 30px;
+  border: 2px solid transparent;
 }
 
 .navigation-catalog-list {
@@ -277,6 +387,7 @@ body {
   background-color: rgba(252, 252, 252, 0.3);
   border: none;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .open-search {
@@ -469,6 +580,33 @@ body {
   background-color: rgba(252, 252, 252, 0.3);
   border: 2px solid #fcfcfc;
   border-radius: 26px;
+  cursor: pointer;
+}
+
+.slider-button:hover {
+  color: #2D3440;
+  background-color: #fcfcfc;
+}
+
+.slider-button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-color: transparent;
+}
+
+.slider-button:focus-visible {
+  outline: none;
+  color: #2D3440;
+  background: rgba(252, 252, 252, 0.3);
+  border-color: #2D3440;
+}
+
+@supports not selector(:focus-visible) {
+  .slider-button:focus-visible {
+    outline: none;
+    color: #2D3440;
+    background: rgba(252, 252, 252, 0.3);
+    border-color: #2D3440;
+  }
 }
 
 .slider-button-prev {
@@ -501,6 +639,7 @@ body {
   box-shadow: 0 0 0 1px rgba(252, 252, 252, 0.3);
   border: none;
   border-radius: 100px;
+  cursor: pointer;
 }
 
 .socials-list {
@@ -680,6 +819,7 @@ body {
   border: none;
   border-radius: 26px;
   flex-grow: 0;
+  cursor: pointer;
 }
 
 .advantages {
@@ -957,16 +1097,29 @@ body {
 
 
 .footer-navigation {
-  padding-left: 26px;
   display: grid;
   grid-template-columns: 130px 200px;
   gap: 8px 20px;
+  padding-left: 26px;
 }
 
 .footer-navigation-title {
+  position: relative;
   margin: 0;
   font-weight: 700;
   font-size: inherit;
+}
+
+.footer-navigation-title::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -24px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../images/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .footer-navigation-link {
