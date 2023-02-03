@@ -633,13 +633,54 @@ body {
 }
 
 .slider-pagination-button {
+  position: relative;
   width: 12px;
   height: 12px;
+  padding: 0;
   background-color: rgba(252, 252, 252, 0.3);
-  box-shadow: 0 0 0 1px rgba(252, 252, 252, 0.3);
-  border: none;
+  border: 1px solid transparent;
   border-radius: 100px;
   cursor: pointer;
+}
+
+.slider-pagination-button::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 16px);
+}
+
+.slider-pagination-button-current {
+  background-color: #fcfcfc;
+  border-color: #fcfcfc;
+  pointer-events: none;
+}
+
+.slider-pagination-button:hover {
+  background: rgba(252, 252, 252, 0.3);
+  border-color: #fcfcfc;
+}
+
+.slider-pagination-button:active {
+  background: #fcfcfc;
+  border-color: transparent;
+  opacity: 0.5;
+}
+
+.slider-pagination-button:focus-visible {
+  outline: none;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-color: #2D3440;
+}
+
+@supports not selector(:focus-visible) {
+  .slider-pagination-button:focus {
+    outline: none;
+    background-color: rgba(252, 252, 252, 0.3);
+    border-color: #2D3440;
+  }
 }
 
 .socials-list {
