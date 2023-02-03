@@ -702,6 +702,7 @@ body {
 }
 
 .socials-link {
+  position: relative;
   display: block;
   width: 24px;
   height: 24px;
@@ -710,6 +711,39 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.socials-link::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 16px);
+}
+
+.socials-link:hover {
+  background-color: #2D3440;
+  box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.5);
+}
+
+.socials-link:active {
+  opacity: 0.5;
+}
+
+.socials-link:focus-visible {
+  outline: none;
+  background-color: #2D3440;
+  box-shadow: 0 0 0 2px #2D3440;
+}
+
+@supports not selector(:focus-visible) {
+  .socials-link:focus {
+    outline: none;
+    background-color: #2D3440;
+    box-shadow: 0 0 0 2px #2D3440;
+  }
+}
+
 
 .socials-telegram {
   background-image: url("../images/socials/telegram-icon.svg");
