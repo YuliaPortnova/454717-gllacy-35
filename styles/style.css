@@ -886,15 +886,53 @@ body {
 
 .product-button {
   margin-left: auto;
-  padding: 9px 10px 9px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
   width: 32px;
   height: 32px;
   color: #ffffff;
-  background-color: #FF2F64;
-  border: none;
+  background-color: #ff2f64;
+  border: 2px solid transparent;
   border-radius: 26px;
   flex-grow: 0;
   cursor: pointer;
+}
+
+.product-button:hover {
+  color: #2d3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-color: #ff2f64;
+}
+
+.product-button:active {
+  color: #2d3440;
+  background-color: #ffcbd8;
+  border-color: #ff2f64;
+}
+
+.product-button:focus-visible {
+  color: #fcfcfc;
+  background-color: #ff2f64;
+  border-color: #2d3440;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .product-button:focus {
+    color: #fcfcfc;
+    background-color: #ff2f64;
+    border-color: #2d3440;
+    outline: none;
+  }
+}
+
+.product-button:disabled {
+  color: #565c66;
+  background-color: #b9b9b9;
+  border-color: transparent;
+  pointer-events: none;
 }
 
 .advantages {
