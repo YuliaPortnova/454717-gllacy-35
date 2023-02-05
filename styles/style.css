@@ -100,29 +100,31 @@ body {
 
 .button-neutral:active {
   background-color: #fcfcfc;
-  box-shadow: 0 0 0 2px #2D3440,
+  box-shadow: 0 0 0 2px #2d3440,
               0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .button-neutral:focus-visible {
   outline: none;
   background-color: rgba(252, 252, 252, 0.5);
-  box-shadow: 0 0 0 2px #2D3440,
+  box-shadow: 0 0 0 2px #2d3440,
               0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 @supports not selector(:focus-visible) {
-  .button-neutral:focus-visible {
+  .button-neutral:focus {
     outline: none;
     background-color: rgba(252, 252, 252, 0.5);
-    box-shadow: 0 0 0 2px #2D3440,
+    box-shadow: 0 0 0 2px #2d3440,
                 0 4px 12px rgba(45, 52, 64, 0.1);
   }
 }
 
 .button-neutral:disabled {
+  color: #b9b9b9;
   background-color: #e7e7e7;
   box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.4);
+  pointer-events: none;
 }
 
 .button-bright {
@@ -132,10 +134,48 @@ body {
               0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
+.button-bright:hover {
+  color: #2d3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 0 0 0 4px #ff2f64;
+}
+
+.button-bright:active {
+  color: #fcfcfc;
+  background-color: #feafc3;
+  box-shadow: 0 0 0 2px #2d3440,
+              0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+.button-bright:focus-visible {
+  outline: none;
+  color: #fcfcfc;
+  background-color: #ff2f64;
+  box-shadow: 0 0 0 2px #2d3440,
+              0 4px 12px rgba(45, 52, 64, 0.1);
+}
+
+@supports not selector(:focus-visible) {
+  .button-bright:focus {
+    outline: none;
+    color: #fcfcfc;
+    background-color: #ff2f64;
+    box-shadow: 0 0 0 2px #2d3440,
+                0 4px 12px rgba(45, 52, 64, 0.1);
+  }
+}
+
+.button-bright:disabled {
+  color: #565c66;
+  background-color: #b9b9b9;
+  box-shadow: 0 0 0 4px rgba(185, 185, 185, 0.3);
+  pointer-events: none;
+}
+
 .input {
   padding: 13px 15px;
   background-color: #ffffff;
-  border: 1px solid #B9B9B9;
+  border: 1px solid #b9b9b9;
   border-radius: 4px;
 }
 
@@ -601,7 +641,7 @@ body {
 }
 
 @supports not selector(:focus-visible) {
-  .slider-button:focus-visible {
+  .slider-button:focus {
     outline: none;
     color: #2D3440;
     background: rgba(252, 252, 252, 0.3);
