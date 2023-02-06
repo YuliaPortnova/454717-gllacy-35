@@ -77,8 +77,9 @@
                 </label>
               </form>
             </div>
-            <div class="header-wrapper-item personal-account-wrapper">
-              <button class="open-personal-account open-button" type="button">
+            <div class="header-wrapper-item personal-account-wrapper" tabindex="0">
+              <!-- tabindex="0" добавлен для корректной работы в Safari -->
+              <button class="open-personal-account open-button" type="button" tabindex="-1">
                 <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="14" height="15" fill="currentColor" viewBox="0 0 14 15">
                   <path fill-rule="evenodd"
@@ -87,6 +88,7 @@
                 </svg>
                 Вход
               </button>
+              <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <section class="personal-account header-dropdown">
                 <h2 class="personal-account-title subtitle">Личный кабинет</h2>
                 <form class="personal-account-form" action="https://echo.htmlacademy.ru/" method="post">

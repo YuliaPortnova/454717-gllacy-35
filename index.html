@@ -23,10 +23,15 @@
             <ul class="navigation-list">
               <li class="navigation-item">
                 <div class="navigation-catalog" tabindex="0">
-                <!-- tabindex="0" добавлен для корректной работы в Safari -->
+                  <!-- tabindex="0" добавлен для корректной работы в Safari -->
                   <button class="navigation-button" type="button" tabindex="-1">
                     Каталог
-                    <svg class="navigation-button-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="12" height="6" fill="currentColor" viewBox="0 0 12 6"><path fill-rule="evenodd" d="M1.8.2a.67.67 0 0 0-.93.94L5.53 5.8a.66.66 0 0 0 .95 0l4.66-4.66A.67.67 0 0 0 10.2.2L6 4.39 1.8.19Z" clip-rule="evenodd"/></svg>
+                    <svg class="navigation-button-icon" aria-hidden="true" focusable="false"
+                      xmlns="http://www.w3.org/2000/svg" width="12" height="6" fill="currentColor" viewBox="0 0 12 6">
+                      <path fill-rule="evenodd"
+                        d="M1.8.2a.67.67 0 0 0-.93.94L5.53 5.8a.66.66 0 0 0 .95 0l4.66-4.66A.67.67 0 0 0 10.2.2L6 4.39 1.8.19Z"
+                        clip-rule="evenodd" />
+                    </svg>
                   </button>
                   <!-- tabindex="-1" добавлен для корректной работы в Safari -->
                   <ul class="navigation-catalog-list header-dropdown">
@@ -57,11 +62,12 @@
             </ul>
           </nav>
           <div class="header-wrapper">
-            <div class="header-wrapper-item phone-wrapper">
-              <a class="header-phone" href="tel:88005558628">+7 800 555-86-28</a>
+            <div class="phone-wrapper">
+              <a class="header-phone navigation-link" href="tel:88005558628">+7 800 555-86-28</a>
             </div>
-            <div class="header-wrapper-item search-wrapper">
-              <button class="open-search open-button" aria-label="Поиск по сайту" type="button">
+            <div class="header-wrapper-item search-wrapper" tabindex="0">
+              <!-- tabindex="0" добавлен для корректной работы в Safari -->
+              <button class="open-search open-button" aria-label="Поиск по сайту" type="button" tabindex="-1">
                 <svg aria-hidden="true" focusable="false" width="14" height="14" fill="currentColor"
                   viewBox="0 0 14 14">
                   <path fill-rule="evenodd"
@@ -69,6 +75,7 @@
                     clip-rule="evenodd" />
                 </svg>
               </button>
+              <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <form class="search-form header-dropdown" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="search-label">
                   <span class="visually-hidden">Поиск</span>
@@ -77,8 +84,9 @@
                 </label>
               </form>
             </div>
-            <div class="header-wrapper-item personal-account-wrapper">
-              <button class="open-personal-account open-button" type="button">
+            <div class="header-wrapper-item personal-account-wrapper" tabindex="0">
+              <!-- tabindex="0" добавлен для корректной работы в Safari -->
+              <button class="open-personal-account open-button" type="button" tabindex="-1">
                 <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                   width="14" height="15" fill="currentColor" viewBox="0 0 14 15">
                   <path fill-rule="evenodd"
@@ -87,6 +95,7 @@
                 </svg>
                 Вход
               </button>
+              <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <section class="personal-account header-dropdown">
                 <h2 class="personal-account-title subtitle">Личный кабинет</h2>
                 <form class="personal-account-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -109,15 +118,18 @@
                 </form>
               </section>
             </div>
-            <div class="header-wrapper-item cart-wrapper">
-              <button class="open-cart open-button" type="button" aria-label="Корзина.">
-                <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="currentColor">
+            <div class="header-wrapper-item cart-wrapper" tabindex="0">
+              <!-- tabindex="0" добавлен для корректной работы в Safari -->
+              <button class="open-cart open-button" type="button" aria-label="Корзина." tabindex="-1">
+                <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                  width="15" height="14" viewBox="0 0 15 14" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"
                     clip-rule="evenodd" />
                 </svg>
                 <span class="open-cart-text">2 товара</span>
               </button>
+              <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <div class="cart">
                 <!-- Для показа пустой корзины переместите класс cart-current с section.cart-full на div.cart-empty -->
                 <section class="cart-full cart-current header-dropdown">
@@ -212,11 +224,21 @@
             <div class="slider-controls">
               <button class="slider-button slider-button-prev" type="button">
                 <span class="visually-hidden">Предыдущий слайд.</span>
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z" clip-rule="evenodd"/></svg>
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"
+                    clip-rule="evenodd" />
+                </svg>
               </button>
               <button class="slider-button slider-button-next" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
-                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z" clip-rule="evenodd"/></svg>
+                <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M7.14 2.86a.66.66 0 1 0-.95.95L10.4 8l-4.2 4.2a.67.67 0 0 0 .95.94l4.66-4.67a.66.66 0 0 0 0-.94L7.15 2.86Z"
+                    clip-rule="evenodd" />
+                </svg>
               </button>
             </div>
             <div class="slider-footer">
