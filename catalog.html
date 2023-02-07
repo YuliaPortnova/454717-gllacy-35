@@ -57,11 +57,12 @@
             </ul>
           </nav>
           <div class="header-wrapper">
-            <div class="header-wrapper-item phone-wrapper">
-              <a class="header-phone" href="tel:88005558628">+7 800 555-86-28</a>
+            <div class="phone-wrapper">
+              <a class="header-phone navigation-link" href="tel:88005558628">+7 800 555-86-28</a>
             </div>
-            <div class="header-wrapper-item search-wrapper">
-              <button class="open-search open-button" aria-label="Поиск по сайту" type="button">
+            <div class="header-wrapper-item search-wrapper" tabindex="0">
+              <!-- tabindex="0" добавлен для корректной работы в Safari -->
+              <button class="open-search open-button" aria-label="Поиск по сайту" type="button" tabindex="-1">
                 <svg aria-hidden="true" focusable="false" width="14" height="14" fill="currentColor"
                   viewBox="0 0 14 14">
                   <path fill-rule="evenodd"
@@ -69,6 +70,7 @@
                     clip-rule="evenodd" />
                 </svg>
               </button>
+              <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <form class="search-form header-dropdown" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="search-label">
                   <span class="visually-hidden">Поиск</span>
@@ -111,15 +113,18 @@
                 </form>
               </section>
             </div>
-            <div class="header-wrapper-item cart-wrapper">
-              <button class="open-cart open-button" type="button" aria-label="Корзина.">
-                <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="currentColor">
+            <div class="header-wrapper-item cart-wrapper" tabindex="0">
+              <!-- tabindex="0" добавлен для корректной работы в Safari -->
+              <button class="open-cart open-button" type="button" aria-label="Корзина." tabindex="-1">
+                <svg class="open-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                  width="15" height="14" viewBox="0 0 15 14" fill="currentColor">
                   <path fill-rule="evenodd"
                     d="M1.17.1a.67.67 0 1 0 0 1.34h1.77l.47 2.34v.05l.97 4.83a1.83 1.83 0 0 0 1.82 1.47h5.62a1.83 1.83 0 0 0 1.82-1.47l.93-4.86a.67.67 0 0 0-.66-.8h-9.3L4.14.65a.67.67 0 0 0-.66-.53H1.17Zm4.52 8.3-.81-4.06h8.23l-.78 4.07a.5.5 0 0 1-.49.39H6.18a.5.5 0 0 1-.49-.4Zm-1.13 3.96a1.25 1.25 0 1 1 2.49 0 1.25 1.25 0 0 1-2.5 0Zm6.37 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0Z"
                     clip-rule="evenodd" />
                 </svg>
                 <span class="open-cart-text">2 товара</span>
               </button>
+              <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <div class="cart">
                 <!-- Для показа пустой корзины переместите класс cart-current с section.cart-full на div.cart-empty -->
                 <section class="cart-full cart-current header-dropdown">
@@ -485,7 +490,7 @@
               </li>
             </ul>
             <div class="catalog-products-footer">
-              <button class="button-more button button-neutral spinner" type="button">Показать ещё</button>
+              <button class="button-more button button-neutral" type="button">Показать ещё</button>
               <!-- Для отображения состояния загрузки, добавьте кнопке класс spinner -->
               <ul class="pagination">
                 <li class="pagination-item">
