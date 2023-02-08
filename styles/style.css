@@ -1869,7 +1869,16 @@ body {
 }
 
 .filter-title {
+  max-width: 164px;
   margin: 0 0 8px 16px;
+}
+
+.filter-group-fat .filter-title {
+  max-width: 333px;
+}
+
+.filter-group-filler .filter-title {
+  max-width: 560px;
 }
 
 .filter-select {
