@@ -677,6 +677,12 @@ body {
 
 .cart-empty {
   width: 288px;
+  padding: 48px 20px;
+}
+
+.cart-empty-text {
+  margin: 0;
+  text-align: center;
 }
 
 .cart-wrapper:focus-within .cart-current {
@@ -692,9 +698,20 @@ body {
 }
 
 .cart-list {
+  position: relative;
   margin: 0 0 64px 0;
   padding: 0;
   list-style-type: none;
+}
+
+.cart-list::after {
+  content: "";
+  position: absolute;
+  bottom: -32px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e7e7e7;
 }
 
 .cart-item {
@@ -715,9 +732,28 @@ body {
   line-height: 22px;
 }
 
-.cart-description {
-  margin: 0;
-  color: #b9b9b9;
+.cart-image {
+  display: block;
+}
+
+.cart-item-link-image:hover {
+  opacity: 0.6;
+}
+
+.cart-item-link-image:active {
+  opacity: 0.3;
+}
+
+.cart-item-link-image:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #2d3440;
+}
+
+@supports not selector(:focus-visible) {
+  .cart-item-link-image:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
+  }
 }
 
 .cart-item-link {
@@ -725,6 +761,31 @@ body {
   margin-bottom: 4px;
   color: #2D3440;
   text-decoration: none;
+}
+
+.cart-item-link:hover {
+  opacity: 0.6;
+}
+
+.cart-item-link:active {
+  opacity: 0.3;
+}
+
+.cart-item-link:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #2d3440;
+}
+
+@supports not selector(:focus-visible) {
+  .cart-item-link:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
+  }
+}
+
+.cart-description {
+  margin: 0;
+  color: #b9b9b9;
 }
 
 .cart-price {
@@ -737,6 +798,34 @@ body {
 .cart-button-close {
   margin: 15px 0 0 0;
   padding: 0;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  background-image: url("../images/cross-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 3px;
+}
+
+.cart-button-close:hover {
+  opacity: 0.6;
+}
+
+.cart-button-close:active {
+  opacity: 0.3;
+}
+
+.cart-button-close:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px #2d3440;
+}
+
+@supports not selector(:focus-visible) {
+  .cart-button-close:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #2d3440;
+  }
 }
 
 .cart-total-wrapper {
@@ -1042,7 +1131,6 @@ body {
     box-shadow: 0 0 0 2px #2D3440;
   }
 }
-
 
 .socials-telegram {
   background-image: url("../images/socials/telegram-icon.svg");
