@@ -1,3 +1,32 @@
+const contactsButton = document.querySelector('.contacts-button');
+const modalContainer = document.querySelector('.modal-container');
+const modalCloseButton = document.querySelector('.modal-close-button');
+
+contactsButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modalContainer.classList.remove('modal-close');
+});
+
+modalCloseButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  modalContainer.classList.add('modal-close');
+});
+
+modalContainer.addEventListener('click', (evt) => {
+  if (evt.target.closest('.modal-feedback')) {
+    return;
+  }
+  evt.preventDefault();
+  modalContainer.classList.add('modal-close');
+});
+
+document.addEventListener('keydown', (evt) => {
+  if (evt.key === 'Escape') {
+    evt.preventDefault();
+    modalContainer.classList.add('modal-close');
+  }
+});
+
 const sliderButtonPrev = document.querySelector('.slider-button-prev');
 const sliderButtonNext = document.querySelector('.slider-button-next');
 const slides = document.querySelectorAll('.slider-item');
