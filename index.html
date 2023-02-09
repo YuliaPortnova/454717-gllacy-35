@@ -79,8 +79,7 @@
               <form class="search-form header-dropdown" action="https://echo.htmlacademy.ru/" method="get">
                 <label class="search-label">
                   <span class="visually-hidden">Поиск</span>
-                  <input class="search-input input" type="search" name="search" placeholder="Поиск по сайту"
-                    required>
+                  <input class="search-input input" type="search" name="search" placeholder="Поиск по сайту" required>
                 </label>
               </form>
             </div>
@@ -106,7 +105,8 @@
                   </label>
                   <label class="personal-account-label">
                     <span class="visually-hidden">Введите ваш пароль.</span>
-                    <input class="personal-account-password-input input" type="password" name="email" value="\\\\\\" required>
+                    <input class="personal-account-password-input input" type="password" name="email" value="\\\\\\"
+                      required>
                   </label>
                   <div class="personal-account-container">
                     <button class="personal-account-button button button-bright" type="submit">Войти</button>
@@ -167,7 +167,7 @@
                   <div class="cart-total-wrapper">
                     <button class="cart-button button button-bright">Оформить заказ</button>
                     <span class="cart-total">Итого: 790 ₽</span>
-                  </di >
+                  </div>
                 </section>
                 <div class="cart-empty header-dropdown">
                   <p class="cart-empty-text subtitle">Ваша корзина пока пуста</p>
@@ -447,26 +447,31 @@
               <p class="delivery-form-description text">Укажите адрес и дату доставки, и мы свяжемся с&nbsp;вами, чтобы
                 подтвердить заказ.</p>
               <div class="delivery-form-wrapper">
-                <label class="delivery-date">
-                  <span class="delivery-label-text label">Дата</span>
+                <div class="delivery-date">
+                  <label class="label delivery-label-text" for="delivery-date">Дата</label>
                   <span class="tooltip">
-                    <button class="tooltip-button" type="button"></button>
-                    <span class="tooltip-text">Введите желаемую дату доставки</span>
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-delivery-date"></button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-delivery-date">Введите желаемую дату
+                      доставки</span>
                   </span>
-                  <input class="delivery-input-date input" type="text" name="date" placeholder="01.04.2020"
+                  <input class="delivery-input-date input" id="delivery-date" type="text" name="date"
+                    placeholder="01.04.2020" required>
+                </div>
+                <div class="delivery-phone">
+                  <label class="delivery-label-text label" for="delivery-phone">Телефон</label>
+                  <input class="delivery-input-phone input" id="delivery-phone" type="tel" name="phone" placeholder="+7 800 999-00-00"
                     required>
-                </label>
-                <label class="delivery-phone">
-                  <span class="delivery-label-text label">Телефон</span>
-                  <input class="delivery-input-phone input" type="tel" name="phone"
-                    placeholder="+7 800 999-00-00" required>
-                </label>
+                </div>
               </div>
-              <label class="delivery-address">
-                <span class="delivery-label-text label">Адрес</span>
-                <input class="delivery-input-phone input" type="tel" name="address"
-                  placeholder="ул. Большая Конюшенная, 19/8" required>
-              </label>
+              <div class="delivery-address">
+                <label class="delivery-label-text label" for="delivery-address">Адрес</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-delivery-address"></button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-delivery-address">Введите название улицы, дома и квартиры</span>
+                </span>
+                <input class="delivery-input-phone input" id="delivery-address" type="tel" name="address"
+                    placeholder="ул. Большая Конюшенная, 19/8" required>
+              </div>
               <button class="button-delivery button button-bright" type="submit">Отправить</button>
               <!-- Для отображения состояния загрузки, добавьте кнопке класс spinner -->
             </form>
@@ -536,7 +541,6 @@
         </div>
       </div>
     </footer>
-    <!-- Для открытия модального окна уберите класс modal-close из div.modal-container -->
     <div class="modal-container modal-close">
       <section class="modal modal-feedback">
         <h2 class="modal-title title subtitle">Мы обязательно ответим вам!</h2>
