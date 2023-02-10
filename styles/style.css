@@ -98,10 +98,16 @@ body {
   mask-image: url("../images/spinner.svg");
   mask-repeat: no-repeat;
   mask-position: center;
-  animation-name: spinner;
+  animation-name: rotate;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .button-neutral::after {
@@ -110,12 +116,6 @@ body {
 
 .button-bright::after {
   background-color: #ffffff;
-}
-
-@keyframes spinner{
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .button-neutral {
@@ -1086,7 +1086,7 @@ body {
 
 .slider-socials-list {
   max-width: 300px;
-  margin: 0 -16px -10px auto;
+  margin: 0 -10px -10px auto;
   justify-content: flex-end;
 }
 
@@ -1455,7 +1455,7 @@ body {
 .subscribe {
   width: 570px;
   padding: 6px;
-  background-image: repeating-linear-gradient(131deg, #ff2f64 0, #ff2f64 10px, #edf1f5 10px, #edf1f5 24px, #69a9ff 24px, #69a9ff 32px, #edf1f5 33px, #edf1f5 47px);
+  background-image: repeating-linear-gradient(133deg, #ff2f64 0, #ff2f64 8px, #edf1f5 8px, #edf1f5 22px, #69a9ff 22px, #69a9ff 30px, #edf1f5 30px, #edf1f5 44px);
   border-radius: 16px;
 }
 
