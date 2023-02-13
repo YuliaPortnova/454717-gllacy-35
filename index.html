@@ -77,10 +77,12 @@
               </button>
               <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <form class="search-form header-dropdown" action="https://echo.htmlacademy.ru/" method="get">
-                <label class="search-label">
-                  <span class="visually-hidden">Поиск</span>
-                  <input class="search-input input" type="search" name="search" placeholder="Поиск по сайту" required>
-                </label>
+                <div class="search-item">
+                  <label for="page-search" class="visually-hidden">Поиск</label>
+                  <input class="search-input input" id="page-search" type="search" name="search"
+                    placeholder="Поиск по сайту" required>
+                  <button class="search-reset-button" type="button" aria-label="Отменить ввод."></button>
+                </div>
               </form>
             </div>
             <div class="header-wrapper-item personal-account-wrapper" tabindex="0">
@@ -459,18 +461,19 @@
                 </div>
                 <div class="delivery-phone">
                   <label class="delivery-label-text label" for="delivery-phone">Телефон</label>
-                  <input class="delivery-input-phone input" id="delivery-phone" type="tel" name="phone" placeholder="+7 800 999-00-00"
-                    required>
+                  <input class="delivery-input-phone input" id="delivery-phone" type="tel" name="phone"
+                    placeholder="+7 800 999-00-00" required>
                 </div>
               </div>
               <div class="delivery-address">
                 <label class="delivery-label-text label" for="delivery-address">Адрес</label>
                 <span class="tooltip">
                   <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-delivery-address"></button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-delivery-address">Введите название улицы, дома и квартиры</span>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-delivery-address">Введите название улицы, дома и
+                    квартиры</span>
                 </span>
                 <input class="delivery-input-phone input" id="delivery-address" type="tel" name="address"
-                    placeholder="ул. Большая Конюшенная, 19/8" required>
+                  placeholder="ул. Большая Конюшенная, 19/8" required>
               </div>
               <button class="button-delivery button button-bright" type="submit">Отправить</button>
               <!-- Для отображения состояния загрузки, добавьте кнопке класс spinner -->

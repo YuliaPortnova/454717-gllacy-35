@@ -72,11 +72,12 @@
               </button>
               <!-- tabindex="-1" добавлен для корректной работы в Safari -->
               <form class="search-form header-dropdown" action="https://echo.htmlacademy.ru/" method="get">
-                <label class="search-label">
-                  <span class="visually-hidden">Поиск</span>
-                  <input class="search-input input" type="search" name="search" placeholder="Поиск по сайту"
-                    required>
-                </label>
+                <div class="search-item">
+                  <label for="page-search" class="visually-hidden">Поиск</label>
+                  <input class="search-input input" id="page-search" type="search" name="search"
+                    placeholder="Поиск по сайту" required>
+                  <button class="search-reset-button" type="button" aria-label="Отменить ввод."></button>
+                </div>
               </form>
             </div>
             <div class="header-wrapper-item personal-account-wrapper" tabindex="0">
@@ -162,7 +163,7 @@
                   <div class="cart-total-wrapper">
                     <button class="cart-button button button-bright">Оформить заказ</button>
                     <span class="cart-total">Итого: 790 ₽</span>
-                  </di >
+                  </div>
                 </section>
                 <div class="cart-empty header-dropdown">
                   <p class="cart-empty-text subtitle">Ваша корзина пока пуста</p>

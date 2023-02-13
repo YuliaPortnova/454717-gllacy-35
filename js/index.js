@@ -75,3 +75,4 @@ paginations.forEach((element, index) => {
     addSlideActiveState();
   });
 })
+
