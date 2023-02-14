@@ -580,6 +580,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  z-index: 2;
   cursor: pointer;
 }
 
@@ -1306,6 +1307,7 @@ body {
   margin-bottom: 16px;
   align-self: center;
   border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
 }
 
 .product-title {
@@ -1968,7 +1970,7 @@ body {
 }
 
 .catalog-title-wrapper {
-  padding-top: 14px;
+  padding-top: 8px;
   margin-bottom: 40px;
 }
 
@@ -2005,7 +2007,7 @@ body {
 
 .breadcrumbs-link-current {
   text-decoration: underline;
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
 }
 
 .breadcrumbs-link:hover {
@@ -2065,7 +2067,7 @@ body {
 }
 
 .filter-group:last-of-type {
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 .filter-title {
@@ -2340,7 +2342,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 41px 0 21px 487px;
+  padding: 41px 0 21px 490px;
 }
 
 .button-more {
@@ -2368,7 +2370,7 @@ body {
   height: 24px;
   background-image: url("../images/arrow-down.svg");
   background-repeat: no-repeat;
-  background-position: right 4px center;
+  background-position: right 4px top 8px;
   border-radius: 50px;
 }
 
