@@ -227,6 +227,7 @@ body {
 
 .input::placeholder {
   color: #b9b9b9;
+  opacity: 1;
 }
 
 .input[type="search"]::-webkit-search-decoration,
