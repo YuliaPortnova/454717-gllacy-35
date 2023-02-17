@@ -2210,43 +2210,56 @@ body {
 
 .filter-control {
   display: flex;
+  cursor: pointer;
 }
 
 .control-mark-radio {
-  display: block;
-  width: 14px;
-  height: 14px;
-  margin: 3px 11px 0 0;
-  box-shadow: 0 0 0 1.5px #2d3440;
-  border: 4px solid transparent;
-  background-clip: padding-box;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 2px 9px 0 0;
+  border: 1px solid #2d3440;
+  border-radius: 50%;
+}
+
+.control-mark-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
   background-color: transparent;
   border-radius: 50%;
 }
 
-.radio-input:checked + .control-mark-radio {
+.radio-input:checked + .control-mark-radio::before {
   background-color: #2d3440;
 }
 
 .filter-control:hover .control-mark-radio {
-  box-shadow: 0 0 0 1.5px #fcfcfc;
+  border-color: #fcfcfc;
 }
 
-.filter-control:hover .radio-input:checked + .control-mark-radio {
+.filter-control:hover .radio-input:checked + .control-mark-radio::before {
   background-color: #fcfcfc;
 }
 
 .radio-input:focus + .control-mark-radio {
-  box-shadow: 0 0 0 1.5px #fcfcfc;
+  border-color: #fcfcfc;
+}
+
+.radio-input:focus + .control-mark-radio::before {
   background-color: #fcfcfc;
 }
 
 .radio-input:disabled + .control-mark-radio {
   opacity: 0.4;
-  box-shadow: 0 0 0 1.5px #2d3440;
+  border-color: #2d3440;
 }
 
-.radio-input[disabled].radio-input[checked] + .control-mark-radio {
+.radio-input[disabled].radio-input[checked] + .control-mark-radio::before {
   background-color: #2d3440;
 }
 
