@@ -599,6 +599,7 @@ body {
 }
 
 .open-button {
+  max-width: 220px;
   font: inherit;
   line-height: inherit;
   color: #2d3440;
@@ -1555,6 +1556,7 @@ body {
 .button-subscribe {
   min-width: 152px;
   padding: 12px 30px;
+  max-width: 209px;
 }
 
 .delivery {
@@ -1781,11 +1783,22 @@ body {
 }
 
 .page-footer-wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 255px 408px 193px;
   gap: 150px;
   align-items: start;
   padding: 48px 0;
+}
+
+.catalog-footer-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(252, 252, 252, 0.3);
 }
 
 .footer-navigation {
@@ -2035,20 +2048,6 @@ body {
 
 .catalog-products {
   margin-bottom: 40px;
-}
-
-.catalog-products-wrapper {
-  position: relative;
-}
-
-.catalog-products-wrapper::after {
-  content: "";
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: rgba(252, 252, 252, 0.3);
 }
 
 .filter-form {
