@@ -74,12 +74,12 @@ body {
 
 .button {
   font-family: inherit;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   padding: 12px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  text-align: center;
   text-decoration: none;
   border-radius: 26px;
   border: none;
@@ -88,10 +88,10 @@ body {
 
 .spinner::after {
   content: "";
-  display: inline-block;
+  display: inline-flex;
   width: 16px;
   height: 16px;
-  margin: 0 0 -2px 9px;
+  margin: 2px 0 -2px 9px;
   -webkit-mask-image: url("../images/spinner.svg");
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
@@ -105,7 +105,11 @@ body {
 }
 
 @keyframes rotate {
-  to {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -516,7 +520,7 @@ body {
 .header-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-start;
   min-width: 485px;
   margin: 12px -16px 12px auto;
@@ -536,8 +540,35 @@ body {
 }
 
 .header-phone {
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 700;
   padding: 5px 14px;
+  color: #2d3440;
+  text-decoration: none;
+  border-radius: 30px;
+  border: 2px solid transparent;
+}
+
+.header-phone:hover {
+  opacity: 0.6;
+}
+
+.header-phone:active {
+  opacity: 0.3;
+}
+
+.header-phone:focus-visible {
+  outline: none;
+  border-color: #2d3440;
+}
+
+@supports not selector(:focus-visible) {
+  .header-phone:focus {
+    outline: none;
+    border-color: #2d3440;
+  }
 }
 
 .search-wrapper:focus-within .search-form {
@@ -911,7 +942,7 @@ body {
 
 .slider-list {
   display: flex;
-  gap: 41px;
+  gap: 40px;
   margin: 0 0 4px 0;
   padding: 0;
   list-style-type: none;
@@ -1590,8 +1621,12 @@ body {
   margin: 0;
 }
 
+.delivery-description:not(:last-child) {
+  margin-bottom: 15px;
+}
+
 .delivery-form {
-  align-self: end;
+  align-self: start;
   padding: 40px 40px 42px 40px;
   background-color: #fcfcfc;
   box-shadow: 0 15px 40px rgba(45, 52, 64, 0.12);
@@ -1605,7 +1640,7 @@ body {
 .delivery-form-wrapper {
   display: grid;
   grid-template-columns: 117px 287px;
-  gap: 18px;
+  gap: 16px;
   align-items: end;
   margin-bottom: 20px;
 }
@@ -1615,7 +1650,7 @@ body {
 }
 
 .delivery-label-text {
-  display: inline-block;
+  display: inline-flex;
   margin-bottom: 8px;
 }
 
@@ -1682,7 +1717,7 @@ body {
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
-  display: inline-block;
+  display: inline-flex;
 }
 
 .delivery-address {
@@ -1723,7 +1758,7 @@ body {
 }
 
 .contacts-phone {
-  display: inline-block;
+  display: inline-flex;
   margin: 0 0 0 -10px;
   padding: 0 10px 0 10px;
   color: #2d3440;
@@ -2216,7 +2251,7 @@ body {
   position: relative;
   width: 16px;
   height: 16px;
-  margin: 2px 9px 0 0;
+  margin: 2px 0 0 0;
   border: 1px solid #2d3440;
   border-radius: 50%;
 }
@@ -2231,6 +2266,10 @@ body {
   height: 6px;
   background-color: transparent;
   border-radius: 50%;
+}
+
+.control-label {
+  padding-left: 9px;
 }
 
 .radio-input:checked + .control-mark-radio::before {
@@ -2256,10 +2295,15 @@ body {
 .radio-input:disabled + .control-mark-radio {
   opacity: 0.4;
   border-color: #2d3440;
+  cursor: auto;
 }
 
 .radio-input[disabled].radio-input[checked] + .control-mark-radio::before {
   background-color: #2d3440;
+}
+
+.radio-input:disabled ~ .control-label {
+  cursor: default;
 }
 
 .control-mark-checkbox {
@@ -2267,7 +2311,7 @@ body {
   height: 16px;
   border: 1.5px solid #2d3440;
   border-radius: 2px;
-  margin: 2px 8px 0 1px;
+  margin: 2px -1px 0 1px;
 }
 
 .checkbox-input:checked + .control-mark-checkbox {
@@ -2300,10 +2344,15 @@ body {
 .checkbox-input:disabled + .control-mark-checkbox {
   opacity: 0.5;
   border-color: #2d3440;
+  cursor: auto;
 }
 
 .checkbox-input[disabled].checkbox-input[checked] + .control-mark-checkbox {
   background-color: #2d3440;
+}
+
+.checkbox-input:disabled ~ .control-label {
+  cursor: default;
 }
 
 .filter-button {
@@ -2355,7 +2404,7 @@ body {
 .catalog-products-footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   padding: 41px 0 21px 490px;
 }
 
@@ -2367,9 +2416,9 @@ body {
 .pagination {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  justify-content: flex-start;
   max-width: 400px;
-  margin: 0 0 12px auto;
+  margin: 11px 0 12px auto;
   padding: 0;
   list-style-type: none;
 }
@@ -2396,7 +2445,7 @@ body {
   transform: rotate(-90deg);
 }
 
-.pagination-button:not([href]) {
+.pagination-button-disabled {
   opacity: 0.3;
   pointer-events: none;
 }
